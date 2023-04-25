@@ -1,8 +1,13 @@
 <script lang="ts">
-  const urlParams = new URLSearchParams(window.location.search);
-  const code = urlParams.get('code');
+	import { onMount } from "svelte/types/runtime/internal/lifecycle";
+
+  $:code = '';
+  onMount(() => {
+    const urlParams = new URLSearchParams(window.location.search);
+    code = urlParams.get('code') || '' as string;
+  });
 </script>
-{#if !(code)}
+{#if !(code) || code == ''}
 <h1>
   Uh oh
 </h1>
