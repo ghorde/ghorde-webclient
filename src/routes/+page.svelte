@@ -29,31 +29,30 @@
         justify-content: center;
         align-items: center;
         height: 100vh;
-        overflow-x: hidden;
-        overflow-y: hidden;
-        gap: 16px;
         background-size: cover;
     }
     .modal{
         height: 100%;
-        padding-top: 41.4%;
+        width: 45%;
+        padding-top: 42%;
         display: flex;
         gap: 25px;
         transform: scale(130%);
+        justify-content: space-between;
         .separator {
-        height: 30%;
-        width: 3px;
-        background-color: white;
-        z-index: 5;
-    }
-    .signUp {
-        height: 100%;
-        padding-top: 8%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 25px;
-    }
+            height: 30%;
+            width: 3px;
+            background-color: white;
+            z-index: 5;
+        }
+        .signUp {
+            height: 100%;
+            padding-top: 4%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 25px;
+        }
     }
     
 </style>
