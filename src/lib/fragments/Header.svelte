@@ -1,10 +1,10 @@
 <script>
-	import MagicalText from "$lib/components/MagicalText.svelte";
+	import HeaderAnimation from "./HeaderAnimation.svelte";
 
 </script>
 <header>
     <!-- <h1 class="rajdhani">ghorde</h1> -->
-    <MagicalText label="ghorde" />
+    <HeaderAnimation label="ghorde" />
 </header>
 <style lang="scss">
     header {

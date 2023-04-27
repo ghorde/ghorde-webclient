@@ -40,7 +40,7 @@
 		}
 
 		&:hover:not(.disabled) {
-			background-color: #2980b9;
+			background-color: #494343;
             transform: scale(102%);
 		}
 	}
