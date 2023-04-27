@@ -89,6 +89,7 @@ for(const star of document.getElementsByClassName("magic-star")) {
 }
 
 h1 {
+  text-shadow: none;
   color: white;
   font-family: "Rajdhani", sans-serif;
   font-size: clamp(2em, 2vw, 4em);
