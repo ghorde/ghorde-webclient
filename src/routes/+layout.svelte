@@ -12,10 +12,6 @@
     background: #210029;
     color: #fff;
     font-family: 'Poppins', sans-serif;
-    h1 {
-      font-size: 3.5rem;
-      font-weight: bold;
-    }
   }
   :global(.rajdhani) {
     font-family: 'Rajdhani', sans-serif;

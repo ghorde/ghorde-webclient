@@ -1,5 +1,10 @@
+<script>
+	import MagicalText from "$lib/components/MagicalText.svelte";
+
+</script>
 <header>
-    <h1 class="rajdhani">ghorde</h1>
+    <!-- <h1 class="rajdhani">ghorde</h1> -->
+    <MagicalText label="ghorde" />
 </header>
 <style lang="scss">
     header {
@@ -13,6 +18,6 @@
     }
     h1 {
         font-size: 5rem;
-        
+
     }
 </style>

@@ -24,7 +24,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 100vh;
+        height: calc(100vh - 156px);
         gap: 16px;
     }
     .separator {
