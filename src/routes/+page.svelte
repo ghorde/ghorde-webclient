@@ -19,7 +19,7 @@
         <h1 class="rajdhani" style= "color: #F5C400;">
             Login with Guilded
         </h1>
-        <GuildedButton text="Sign Up" onClick="{handleClick}" />
+        <GuildedButton text="Log In" onClick="{handleClick}" />
     </div>
     </div>
 </main>
@@ -30,24 +30,23 @@
         align-items: center;
         height: 100vh;
         background-size: cover;
+        position: relative;
+        h1 {
+            font-size: 3rem
+        }
     }
     .modal{
         height: 100%;
         width: 45%;
-        padding-top: 42%;
         display: flex;
-        gap: 25px;
-        transform: scale(130%);
         justify-content: space-between;
+        align-items: center;
         .separator {
-            height: 30%;
+            height: 40%;
             width: 3px;
             background-color: white;
-            z-index: 5;
         }
         .signUp {
-            height: 100%;
-            padding-top: 4%;
             display: flex;
             flex-direction: column;
             align-items: center;
