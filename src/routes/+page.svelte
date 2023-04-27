@@ -1,14 +1,19 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
     import GuildedButton from '$lib/fragments/GuildedButton.svelte';
-    import backgroundplaceholder from '$lib/assets/images/backgroundplaceholder.jpg';
+
+    export let data;
+
+    function pickRandomFromList (list: Array<any>) {
+        return list[Math.floor(Math.random() * list.length)];
+    }
 
     function handleClick() {
       console.log('Button clicked');
       goto("https://authlink.guildedapi.com/a/endjourney");
     }
   </script>
-<main style={`background-image: url(${backgroundplaceholder});`}>
+<main style={`background-image: url(${pickRandomFromList(data.backgrounds)});`}>
     <div class="modal">
     <h1 class="rajdhani">
         Experience<br />Limitless<br />Creativity with<br />AI-Driven Image<br />Generation
@@ -31,6 +36,7 @@
         height: 100vh;
         background-size: cover;
         position: relative;
+        text-shadow: 2px 2px 4px #000000;
         h1 {
             font-size: 3rem
         }
@@ -41,6 +47,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        text-align: center;
         .separator {
             height: 40%;
             width: 3px;
