@@ -13,6 +13,7 @@
   :root {
     background: #210029;
     color: #fff;
+    text-shadow: 2px 2px 4px #000000;
     font-family: 'Poppins', sans-serif;
     overflow-y: hidden;
     overflow-x: hidden;
