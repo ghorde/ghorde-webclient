@@ -1,16 +1,18 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
     import GuildedButton from '$lib/fragments/GuildedButton.svelte';
+    import backgroundplaceholder from '$lib/assets/images/backgroundplaceholder.jpg';
 
     function handleClick() {
       console.log('Button clicked');
       goto("https://authlink.guildedapi.com/a/endjourney");
     }
   </script>
-<main>
+<main style={`background-image: url(${backgroundplaceholder}); background-size: cover`}>
     <h1 class="rajdhani">
         Experience<br />Limitless<br />Creativity with<br />AI-Driven Image<br />Generation
     </h1>
+
     <div class="separator"/>
     <div class="signUp">
         <h1 class="rajdhani" style= "color: #F5C400;">
