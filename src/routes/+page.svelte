@@ -1,8 +1,7 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
-    import Button from '$lib/components/Button.svelte';
-    import Header from '$lib/fragments/Header.svelte';
-  
+    import GuildedButton from '$lib/fragments/GuildedButton.svelte';
+
     function handleClick() {
       console.log('Button clicked');
       goto("https://authlink.guildedapi.com/a/endjourney");
@@ -12,12 +11,12 @@
     <h1 class="rajdhani">
         Experience<br />Limitless<br />Creativity with<br />AI-Driven Image<br />Generation
     </h1>
-    <div class="separator" />
+    <div class="separator"/>
     <div class="signUp">
-        <h1 class="rajdhani">
+        <h1 class="rajdhani" style= "color: #F5C400;">
             Login with Guilded
         </h1>
-        <Button text="Sign Up" onClick="{handleClick}" />
+        <GuildedButton text="Sign Up" onClick="{handleClick}" />
     </div>
 </main>
 <style lang="scss">
@@ -25,7 +24,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        height: calc(100vh - 156px);
+        height: 100vh;
         gap: 16px;
     }
     .separator {

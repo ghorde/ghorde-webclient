@@ -9,6 +9,7 @@
         height: 156px;
         background-color: rgba(255, 255, 255, 0.102);
         color: #DB00FF;
+        border-radius : 0px 0px 8px 8px;
     }
     h1 {
         font-size: 5rem;
