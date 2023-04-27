@@ -7,5 +7,36 @@
       goto("https://authlink.guildedapi.com/a/endjourney");
     }
   </script>
-  
-  <Button text="Click me" onClick="{handleClick}" />
+<main>
+    <h1 class="rajdhani">
+        Experience<br />Limitless<br />Creativity with<br />AI-Driven Image<br />Generation
+    </h1>
+    <div class="separator" />
+    <div class="signUp">
+        <h1 class="rajdhani">
+            Login with Guilded
+        </h1>
+        <Button text="Sign Up" onClick="{handleClick}" />
+    </div>
+</main>
+<style lang="scss">
+    main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        gap: 16px;
+    }
+    .separator {
+        height: 30%;
+        width: 1px;
+        background-color: white;
+        z-index: 5;
+    }
+    .signUp {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+    }
+</style>
