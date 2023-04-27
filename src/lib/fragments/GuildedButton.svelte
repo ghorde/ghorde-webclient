@@ -23,10 +23,11 @@
         }
     }
 	button {
-		background-color: #2E2A2A;
+		backdrop-filter: saturate(180%) blur(10px);
+		background-color: #2d2a2ece;
 		border: none;
 		border-radius: 5px;
-		color: #fff;
+		color: #ffffffce;
 		cursor: pointer;
 		font-size: 16px;
 		padding: 10px 20px;
@@ -35,12 +36,12 @@
         font-weight: bold;
 
 		&.disabled {
-			background-color: #ccc;
+			background-color: #ccccccce;
 			cursor: not-allowed;
 		}
 
 		&:hover:not(.disabled) {
-			background-color: #494343;
+			background-color: #494343ce;
             transform: scale(102%);
 		}
 	}

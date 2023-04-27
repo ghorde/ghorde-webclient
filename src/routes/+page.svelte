@@ -35,6 +35,7 @@
         align-items: center;
         height: 100vh;
         background-size: cover;
+        background-position: center center;
         position: relative;
         text-shadow: 2px 2px 4px #000000;
         h1 {
