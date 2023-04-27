@@ -15,10 +15,6 @@
     overflow-y: hidden;
     overflow-x: hidden;
   }
-  body {
-    margin: 0;
-    padding: 0;
-  }
   :global(.rajdhani) {
     font-family: 'Rajdhani', sans-serif;
   }
