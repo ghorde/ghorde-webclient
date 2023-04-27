@@ -8,7 +8,8 @@
       goto("https://authlink.guildedapi.com/a/endjourney");
     }
   </script>
-<main style={`background-image: url(${backgroundplaceholder}); background-size: cover`}>
+<main style={`background-image: url(${backgroundplaceholder});`}>
+    <div class="modal">
     <h1 class="rajdhani">
         Experience<br />Limitless<br />Creativity with<br />AI-Driven Image<br />Generation
     </h1>
@@ -20,25 +21,39 @@
         </h1>
         <GuildedButton text="Sign Up" onClick="{handleClick}" />
     </div>
+    </div>
 </main>
 <style lang="scss">
     main {
         display: flex;
         justify-content: center;
         align-items: center;
-        height: calc(100vh - 156px);
+        height: 100vh;
+        overflow-x: hidden;
+        overflow-y: hidden;
         gap: 16px;
+        background-size: cover;
     }
-    .separator {
+    .modal{
+        height: 100%;
+        padding-top: 41.4%;
+        display: flex;
+        gap: 25px;
+        transform: scale(130%);
+        .separator {
         height: 30%;
-        width: 1px;
+        width: 3px;
         background-color: white;
         z-index: 5;
     }
     .signUp {
+        height: 100%;
+        padding-top: 8%;
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 16px;
+        gap: 25px;
     }
+    }
+    
 </style>

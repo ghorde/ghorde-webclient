@@ -8,11 +8,14 @@
 </header>
 <style lang="scss">
     header {
+        position: absolute;
+        z-index: 1000;
+        width: 100vw;
         display: flex;
         justify-content: center;
         align-items: center;
         height: 156px;
-        background-color: rgba(255, 255, 255, 0.102);
+        background: rgba(255, 255, 255, 0.06);
         color: #DB00FF;
         border-radius : 0px 0px 8px 8px;
     }
