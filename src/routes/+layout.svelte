@@ -1,3 +1,8 @@
+<script lang="ts">
+  import Header from '$lib/fragments/Header.svelte';
+</script>
+
+<Header />
 <slot />
 
 <style lang="scss">
