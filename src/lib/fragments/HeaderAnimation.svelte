@@ -28,6 +28,7 @@ h1 {
   margin: 0px;
   padding: 20px;
   text-align: center;
+  text-shadow: none;
 }
 h1 > .magic > .magic-text {
   animation: background-pan 3s linear infinite;
