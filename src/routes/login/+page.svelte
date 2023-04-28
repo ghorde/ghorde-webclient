@@ -15,10 +15,15 @@
   onMount(async() => {
     const urlParams = new URLSearchParams(window.location.search);
     code = urlParams.get('code') || '' as string;
-    if (code && code != '') {
-      await issueToken(code);
-      goto('/home');
+    (async() => {
+      while(true) {
+        if(code && code != '') {
+        await issueToken(code);
+        goto('/home');
+      }
+      }
     }
+    )();
   });
 </script>
 <main>
