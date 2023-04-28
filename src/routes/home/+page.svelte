@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { apiAxios } from "$lib/helpers/axios";
 	import { token } from "$lib/helpers/global";
-	import { onMount } from "svelte/types/runtime/internal/lifecycle";
+	import { onMount } from "svelte";
 
   onMount(async() => {
     const userData = await apiAxios.post('/user/info', {code: token})
