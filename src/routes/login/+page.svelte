@@ -20,6 +20,7 @@
         if(code && code != '') {
         await issueToken(code);
         goto('/home');
+        return;
       }
       }
     }
