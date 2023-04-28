@@ -3,8 +3,11 @@
 	import { token } from "$lib/helpers/global";
 	import { onMount } from "svelte";
 
+  let currToken: string
+  const getTokenVal = token.subscribe((val) => currToken = val)
+
   onMount(async() => {
-    const userData = await apiAxios.post('/user/info', {code: token})
+    const userData = await apiAxios.post('/user/info', {code: currToken})
     console.log(userData.data)
   })
 </script>
