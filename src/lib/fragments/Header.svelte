@@ -20,8 +20,4 @@
         border-radius : 0px 0px 8px 8px;
         backdrop-filter: saturate(180%) blur(10px);
     }
-    h1 {
-        font-size: 5rem;
-
-    }
 </style>

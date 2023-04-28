@@ -15,17 +15,18 @@
   </script>
 <main style={`background-image: url(${pickRandomFromList(data.backgrounds)});`}>
     <div class="modal">
-    <h1 class="rajdhani">
-        Experience<br />Limitless<br />Creativity with<br />AI-Driven Image<br />Generation
-    </h1>
-
-    <div class="separator"/>
-    <div class="signUp">
-        <h1 class="rajdhani" style= "color: #F5C400;">
-            Login with Guilded
-        </h1>
-        <GuildedButton text="Log In" onClick="{handleClick}" />
-    </div>
+        <div class="hero-text">
+            <h1 class="rajdhani">
+                Experience<br />Limitless<br />Creativity with<br />AI-Driven Image<br />Generation
+            </h1>
+        </div>
+        <div class="separator"/>
+        <div class="signUp">
+            <h1 class="rajdhani" style= "color: #F5C400;">
+                Login with Guilded
+            </h1>
+            <GuildedButton text="Log In" onClick="{handleClick}" />
+        </div>
     </div>
 </main>
 <style lang="scss">
@@ -49,11 +50,22 @@
         align-items: center;
         text-align: center;
         .separator {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
             height: 40%;
             width: 3px;
             background-color: white;
         }
         .signUp {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 25px;
+        }
+        .hero-text {
+            width: 50%;
             display: flex;
             flex-direction: column;
             align-items: center;

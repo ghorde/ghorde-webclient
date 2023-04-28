@@ -1,10 +1,22 @@
 <script lang="ts">
+	import { apiAxios } from "$lib/helpers/axios";
 	import { onMount } from "svelte";
-
   $:code = '';
+  const issueToken = async(code: string) => {
+    const {data} = await apiAxios.post('session/token', {code});
+    const {access_token, refresh_token, expires_in, issue_time} = data.data;
+    localStorage.setItem('access_token', access_token);
+    localStorage.setItem('refresh_token', refresh_token);
+    localStorage.setItem('expires_in', expires_in);
+    localStorage.setItem('issue_time', issue_time);
+    console.log(data.data);
+  }
   onMount(() => {
     const urlParams = new URLSearchParams(window.location.search);
     code = urlParams.get('code') || '' as string;
+    if (code && code != '') {
+      issueToken(code);
+    }
   });
 </script>
 <main>
@@ -12,10 +24,10 @@
   <h1>
     Uh oh
   </h1>
-  <p>You are supposed to be redirected to this page with a code!<br />That did not happen so apparently something is broken!</p>
+    <p>You are supposed to be redirected to this page with a code!<br />That did not happen so apparently something is broken!</p>
   {:else}
-  <h1>Got code to login!</h1>
-  <p>Code: {code}</p>
+    <h1>Got code to login!</h1>
+    <p>Code: {code}</p>
   {/if}
 </main>
 
