@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { goto } from "$app/navigation";
 	import { apiAxios } from "$lib/helpers/axios";
+	import { token } from "$lib/helpers/global";
 	import { onMount } from "svelte";
   $:code = '';
   const issueToken = async(code: string) => {
@@ -19,6 +20,10 @@
       while(true) {
         if(code && code != '') {
         await issueToken(code);
+        const at = localStorage.getItem('access_token');
+        if (at) {
+          token.set(at);
+        }
         goto('/home');
         return;
       }
