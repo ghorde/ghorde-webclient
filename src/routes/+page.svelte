@@ -72,5 +72,47 @@
             gap: 25px;
         }
     }
+
+    @media (max-width: 700px) {
+        .modal {
+            flex-direction: column;
+            width: 100%;
+            gap: 5px;
+            justify-content: center;
+            .separator {
+                position: relative;
+                transform: translateX(-100%);
+                height: 3px;
+                width: 50%;
+            }
+            .hero-text {
+                h1 {
+                    margin: 10px;
+                    font-size: 2rem;
+                }
+            }
+            .signUp {
+                h1 {
+                    margin: 10px;
+                    font-size: 2rem;
+                }
+            }
+        }
+    }
+
+    @media (max-height: 700px) and (max-width: 700px) {
+        .modal {
+            .hero-text {
+                h1 {
+                    font-size: 1.5rem;
+                }
+            }
+            .signUp {
+                h1 {
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    }
     
 </style>
