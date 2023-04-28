@@ -10,7 +10,7 @@
 
     function handleClick() {
       console.log('Button clicked');
-      goto("https://authlink.guildedapi.com/a/endjourney");
+      goto("/loginPreprocessor");
     }
   </script>
 <main style={`background-image: url(${pickRandomFromList(data.backgrounds)});`}>
@@ -73,7 +73,7 @@
         }
     }
 
-    @media (max-width: 700px) {
+    @media (max-width: 900px) {
         .modal {
             flex-direction: column;
             width: 100%;
@@ -100,7 +100,7 @@
         }
     }
 
-    @media (max-height: 700px) and (max-width: 700px) {
+    @media (max-height: 700px) and (max-width: 900px) {
         .modal {
             .hero-text {
                 h1 {

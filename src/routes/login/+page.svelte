@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { goto } from "$app/navigation";
 	import { apiAxios } from "$lib/helpers/axios";
 	import { onMount } from "svelte";
   $:code = '';
@@ -11,11 +12,12 @@
     localStorage.setItem('issue_time', issue_time);
     console.log(data.data);
   }
-  onMount(() => {
+  onMount(async() => {
     const urlParams = new URLSearchParams(window.location.search);
     code = urlParams.get('code') || '' as string;
     if (code && code != '') {
-      issueToken(code);
+      await issueToken(code);
+      goto('/home');
     }
   });
 </script>
