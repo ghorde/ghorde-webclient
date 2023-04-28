@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
     import GuildedButton from '$lib/fragments/GuildedButton.svelte';
+    // import Guilded_color from '$/lib/assets/images/Guilded_color.svg';
 
     export let data;
 

@@ -1,5 +1,5 @@
 <script lang="ts">
-    import logo from '$lib/assets/images/logo.png';
+	import Guilded_color from '$lib/assets/images/Guilded_color.svg';
 	export let text: string;
 	export let disabled: boolean = false;
 	export let onClick: () => void;
@@ -7,7 +7,7 @@
 
 <button class={disabled ? 'disabled' : ''} on:click={onClick}>
     <div class="container">
-        <img src={logo} alt="Guilded Logo" width="22px" height="22px">
+        <img src={Guilded_color} alt="Guilded Logo" width="22px" height="22px">
         {text}
     </div>
 </button>
