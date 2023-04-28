@@ -1,6 +1,5 @@
 <script lang="ts">
 	import ModelCard from "$lib/fragments/ModelCard.svelte";
-	import { apiAxios } from "$lib/helpers/axios";
   export let data; 
   const {models} = data;
 </script>
