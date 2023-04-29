@@ -14,6 +14,11 @@
       goto("/loginPreprocessor");
     }
   </script>
+
+<svelte:head>
+	<title>G-horde</title>
+</svelte:head>
+
 <main style={`background-image: url(${pickRandomFromList(data.backgrounds)});`}>
     <div class="modal">
         <div class="hero-text">
