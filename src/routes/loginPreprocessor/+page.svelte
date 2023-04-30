@@ -7,7 +7,7 @@
     const data = await apiAxios.patch('session/token', {code}).catch((e) => {
       console.log('Error while refreshing token: ', e);
       localStorage.clear();
-      goto('https://authlink.guildedapi.com/a/endjourney');
+      goto('https://ghorde-authlink.kodski.com/a/endjourney');
     });
     if (data) {
       const {access_token, refresh_token, expires_in, issue_time} = data.data;
@@ -18,7 +18,7 @@
       console.log(data.data);
       return
     }
-    goto('https://authlink.guildedapi.com/a/endjourney');
+    goto('https://ghorde-authlink.kodski.com/a/endjourney');
   }
   
   const check = () => {
@@ -43,7 +43,7 @@
         return
       }
     }
-    goto('https://authlink.guildedapi.com/a/endjourney')
+    goto('https://ghorde-authlink.kodski.com/a/endjourney')
     return
   }
   check();
