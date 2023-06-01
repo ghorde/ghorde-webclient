@@ -1,10 +1,10 @@
 <script lang="ts">
 	import { apiAxios } from "$lib/helpers/axios";
-	import { token } from "$lib/helpers/global";
 	import { onMount } from "svelte";
 
-  let currToken: string
-  const getTokenVal = token.subscribe((val) => currToken = val)
+  export let data;
+
+  const currToken = data.token;
 
   onMount(async() => {
     const userData = await apiAxios.post('/user/info', {code: currToken})
@@ -13,7 +13,7 @@
 </script>
 
 <div class="home">
-  Token is {$token}
+  Token is {currToken}
 </div>
 
 <style lang="scss">
