@@ -12,15 +12,12 @@
     </div>
 </button>
 
-<style lang="scss">
+<style lang="postcss">
     .container {
         display: flex;
         justify-content: center;
         align-items: center;
         gap: 16px;
-        img {
-            border-radius: 4px ;
-        }
     }
 	button {
 		backdrop-filter: saturate(180%) blur(10px);
@@ -32,8 +29,7 @@
 		font-size: 16px;
 		padding: 10px 20px;
 		transition: background-color 0.3s ease;
-        // font-family: 'Poppins', sans-serif;
-        font-weight: bold;
+		font-weight: bold;
 
 		&.disabled {
 			background-color: #ccccccce;
