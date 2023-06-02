@@ -4,6 +4,9 @@
   const {models} = data;
 </script>
 
+<h1>
+  Models
+</h1>
 <div class="modelsContainer">
   {#each models as model}
     <ModelCard {...model} />
@@ -15,6 +18,6 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding-top: 156px;
+    gap: 12px;
   }
 </style>

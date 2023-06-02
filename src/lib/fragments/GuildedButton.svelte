@@ -32,7 +32,7 @@
 		font-size: 16px;
 		padding: 10px 20px;
 		transition: background-color 0.3s ease;
-        font-family: 'Poppins', sans-serif;
+        // font-family: 'Poppins', sans-serif;
         font-weight: bold;
 
 		&.disabled {

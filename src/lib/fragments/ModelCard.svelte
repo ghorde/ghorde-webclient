@@ -7,7 +7,7 @@
 
 </script>
 
-<div class="modelCard">
+<div class="card flex flex-col gap-2 card card-hover w-[300px] p-4 bg-surface-900">
   <h1>
     {name}
   </h1>
@@ -24,42 +24,3 @@
     ETA: {eta}
   </div>
 </div>
-
-<style lang="scss">
-  .modelCard {
-    background-color: #1E1E1E;
-    border-radius: 10px;
-    padding: 10px;
-    margin: 10px;
-    width: 300px;
-    height: 200px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    h1 {
-      font-size: 1.5rem;
-      font-weight: 500;
-      margin: 0;
-    }
-    .performance {
-      font-size: 1rem;
-      font-weight: 400;
-      margin: 0;
-    }
-    .count {
-      font-size: 1rem;
-      font-weight: 400;
-      margin: 0;
-    }
-    .queued {
-      font-size: 1rem;
-      font-weight: 400;
-      margin: 0;
-    }
-    .eta {
-      font-size: 1rem;
-      font-weight: 400;
-      margin: 0;
-    }
-  }
-</style>

@@ -1,24 +1,43 @@
-<script lang="ts">
-  import Header from '$lib/fragments/Header.svelte';
+<script lang='ts'>
+	// The ordering of these imports is critical to your app working properly
+	import '@skeletonlabs/skeleton/themes/theme-modern.css';
+	// If you have source.organizeImports set to true in VSCode, then it will auto change this ordering
+	import '@skeletonlabs/skeleton/styles/skeleton.css';
+	// Most of your app wide CSS should be put in this file
+	import '../app.postcss';
+	import { AppShell, AppBar } from '@skeletonlabs/skeleton';
+	import GuildedButton from '$lib/fragments/GuildedButton.svelte';
+	import { goto } from '$app/navigation';
+
+	const handleLoginClick = () => {
+		goto('https://cardboard.ink/a/ghorde');
+	}
 </script>
 
-<Header />
-<main>
-  <slot />
-</main>
-
-<style lang="scss">
-  @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-  @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap');
-  :root {
-    background: #210029;
-    color: #fff;
-    text-shadow: 2px 2px 4px #000000;
-    font-family: 'Poppins', sans-serif;
-    // overflow-y: hidden;
-    overflow-x: hidden;
-  }
-  :global(.rajdhani) {
-    font-family: 'Rajdhani', sans-serif;
-  }
-  </style>
+<!-- App Shell -->
+<AppShell>
+	<svelte:fragment slot="header">
+		<!-- App Bar -->
+		<AppBar>
+			<svelte:fragment slot="lead">
+				<a href="/">
+					<h1 class="text-xl uppercase">Ghorde</h1>
+				</a>
+			</svelte:fragment>
+			<svelte:fragment slot="trail">
+				<div class="flex items-center justify-end gap-4">
+					<a href="/models" target="_blank" rel="noopener noreferrer">
+						<h3>
+							Models
+						</h3>
+					</a>
+					<GuildedButton text="Login with Guilded" onClick={handleLoginClick} />
+				</div>
+			</svelte:fragment>
+		</AppBar>
+	</svelte:fragment>
+	<!-- Page Route Content -->
+	<div class="px-4 text-xl my-2">
+		<slot />
+	</div>
+</AppShell>
