@@ -7,17 +7,8 @@
 <h1>
   Models
 </h1>
-<div class="modelsContainer">
+<div class="flex flex-wrap justify-center gap-3">
   {#each models as model}
     <ModelCard {...model} />
   {/each}
 </div>
-
-<style lang="scss">
-  .modelsContainer {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 12px;
-  }
-</style>
