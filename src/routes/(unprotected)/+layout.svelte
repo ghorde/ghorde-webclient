@@ -5,13 +5,16 @@
 	import '@skeletonlabs/skeleton/styles/skeleton.css';
 	// Most of your app wide CSS should be put in this file
 	import '../../app.postcss';
-	import { AppShell, AppBar } from '@skeletonlabs/skeleton';
+	import { AppShell, AppBar, Avatar } from '@skeletonlabs/skeleton';
 	import GuildedButton from '$lib/fragments/GuildedButton.svelte';
 	import { goto } from '$app/navigation';
+	import { page } from '$app/stores';
 
 	const handleLoginClick = () => {
 		goto('https://cardboard.ink/a/ghorde');
 	}
+
+	let userActionsVisible = false;
 </script>
 
 <!-- App Shell -->
@@ -31,7 +34,28 @@
 							Models
 						</h3>
 					</a>
+					{#if !$page.data.user}
 					<GuildedButton text="Login with Guilded" onClick={handleLoginClick} />
+					{:else}
+					<div class="flex items-center gap-4 relative" 
+					on:mouseenter={() => userActionsVisible = true} 
+					on:mouseleave={() => userActionsVisible = false} 
+					on:focus={() => userActionsVisible = true}>
+						<h3>
+							{$page.data.user.name}
+						</h3>
+						<Avatar src={$page.data.user.avatar} width="w-16" />
+						{#if userActionsVisible}
+						<div class="flex flex-col gap-2 absolute right-0 top-12 bg-surface-900 p-4 left-0 card">
+							<a href="/logout">
+								<h3>
+									Logout
+								</h3>
+							</a>
+						</div>
+						{/if}
+					</div>
+					{/if}
 				</div>
 			</svelte:fragment>
 		</AppBar>
