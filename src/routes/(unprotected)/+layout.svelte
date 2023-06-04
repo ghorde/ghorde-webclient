@@ -44,14 +44,16 @@
 						<h3>
 							{$page.data.user.name}
 						</h3>
-						<Avatar src={$page.data.user.avatar} width="w-16" />
+						<Avatar src={$page.data.user.avatar} width="w-12" />
 						{#if userActionsVisible}
 						<div class="flex flex-col gap-2 absolute right-0 top-12 bg-surface-900 p-4 left-0 card">
-							<a href="/logout">
-								<h3>
-									Logout
-								</h3>
-							</a>
+							<form action="/logout" method="POST">
+								<button class="justify-start text-error-600" type="submit">
+									<h3>
+										Logout
+									</h3>
+								</button>
+							</form>
 						</div>
 						{/if}
 					</div>

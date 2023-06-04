@@ -11,7 +11,7 @@ export const handle: Handle = async ({ event, resolve }) => {
   }
 
   const userData = await apiAxios.post('/user/info', JSON.stringify({code}))
-  if (!userData.data.data) {
+  if (!userData.data.data.id) {
     event.cookies.set('session', '', {
       path: '/',
       expires: new Date(0),
