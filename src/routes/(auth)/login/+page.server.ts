@@ -3,17 +3,16 @@ import {redirect} from "@sveltejs/kit"
 
 export const load = async({url, cookies}) => {
   const code = url.searchParams.get('code')
-  console.log(code)
   if (!code) {
-    throw redirect( 302, '/login')
+    throw redirect( 302, '/')
   }
 
   const authenticationData = await apiAxios.post('/session/token', {code}).catch((err) => {
-    throw redirect( 302, '/login')
+    throw redirect( 302, '/')
   })
 
   if (!authenticationData) {
-    throw redirect( 302, '/login')
+    throw redirect( 302, '/')
   }
 
   const sessionToken = authenticationData.data.data.access_token
@@ -22,9 +21,8 @@ export const load = async({url, cookies}) => {
     path: '/',
     expires: new Date(Date.now() + 1000 * 60 * 60 * 24 * 7),
     httpOnly: true,
-    sameSite: 'strict',
+    sameSite: 'lax',
   })
   
   throw redirect( 302, '/')
 }
-
