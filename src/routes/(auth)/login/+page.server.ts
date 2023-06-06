@@ -7,7 +7,8 @@ export const load = async({url, cookies}) => {
     throw redirect( 302, '/')
   }
 
-  const authenticationData = await apiAxios.post('/session/token', {code}).catch((err) => {
+  const authenticationData = await apiAxios.post('session/token', {code}).catch((err) => {
+    console.log(err)
     throw redirect( 302, '/')
   })
 

@@ -11,7 +11,7 @@ export const actions = {
     if (!code) {
       throw redirect( 302, '/')
     }
-    apiAxios.post('/session/revoke', JSON.stringify({code}))
+    apiAxios.post('session/revoke', JSON.stringify({code}))
     cookies.set('session', '', {
 			path: '/',
 			expires: new Date(0),

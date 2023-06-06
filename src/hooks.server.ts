@@ -1,6 +1,5 @@
 import { apiAxios } from "$lib/helpers/axios";
 import type {Handle} from "@sveltejs/kit"
-import { get } from "svelte/store";
 
 export const handle: Handle = async ({ event, resolve }) => {
   
@@ -10,7 +9,7 @@ export const handle: Handle = async ({ event, resolve }) => {
     return await resolve(event);
   }
 
-  const userData = await apiAxios.post('/user/info', JSON.stringify({code}))
+  const userData = await apiAxios.post('user/info', JSON.stringify({code}))
   if (!userData.data.data.id) {
     event.cookies.set('session', '', {
       path: '/',

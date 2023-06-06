@@ -11,7 +11,7 @@
 	import { page } from '$app/stores';
 
 	const handleLoginClick = () => {
-		goto('https://cardboard.ink/a/ghorde');
+		goto('https://cardboard.ink/a/glt');
 	}
 
 	let userActionsVisible = false;
