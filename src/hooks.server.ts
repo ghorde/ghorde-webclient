@@ -10,14 +10,18 @@ export const handle: Handle = async ({ event, resolve }) => {
   }
 
   const userData = await apiAxios.post('user/info', JSON.stringify({code})).catch((err) => {
+    console.log(err)
+    return;
+  })
+  if (!userData) {
     event.cookies.set('session', '', {
       path: '/',
       expires: new Date(0),
     })
-    return resolve(event);
-  })
+    return await resolve(event);
+  }
 
-  if (!(userData as any).data.data.id) {
+  if (!userData.data.data.id) {
     event.cookies.set('session', '', {
       path: '/',
       expires: new Date(0),
@@ -25,7 +29,7 @@ export const handle: Handle = async ({ event, resolve }) => {
     return resolve(event);
   }
 
-  const user = (userData as any).data.data
+  const user = userData.data.data
 
   event.locals.user = {
     id: user.id,
