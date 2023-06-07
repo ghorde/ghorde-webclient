@@ -11,4 +11,4 @@ const startAxios: (baseURL: string) => Axios = (baseURL) => {
 	return axiosInstance;
 };
 
-export const apiAxios = startAxios('http://localhost:5050/webclient/');
+export const apiAxios = startAxios('https://ghorde-api.kodski.com/webclient/');
